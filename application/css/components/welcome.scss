@@ -1,0 +1,71 @@
+@import "../colors";
+
+#welcome {
+  position: relative;
+  width: 560px;
+  height: 100%;
+  margin: 0 auto;
+
+  transition: opacity 0.33s ease-out;
+
+  &.hide {
+    opacity: 0;
+  }
+
+  header,
+  footer {
+    padding: 48px;
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  header {
+    text-align: center;
+
+    h1 {
+      color: $blue-grey-800;
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: -2px;
+    }
+
+    p {
+      color: $blue-grey-600;
+      margin-top: 18px * 1.4;
+      font-size: 18px;
+    }
+
+    button {
+      background: $dribbble-pink;
+      color: $white;
+      margin: 64px auto 0;
+      padding: 18px 48px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25px;
+      display: block;
+    }
+
+    object {
+      width: 24px;
+      height: 24px;
+      margin: 0 10px 0 0;
+      float: left;
+    }
+  }
+
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    p {
+      color: $blue-grey-400;
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}

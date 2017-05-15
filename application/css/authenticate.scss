@@ -1,0 +1,85 @@
+// scss-lint:disable all
+
+body {
+  -webkit-user-select: none !important;
+}
+
+input,
+button {
+  outline: 0 !important;
+}
+
+html,
+body.logged-in,
+body.logged-in #wrap {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.notice.error h2 {
+  position: relative !important;
+  height: 23px !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+
+  &::before {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    content: "Invalid username or password. Please try again." !important;
+    visibility: visible !important;
+  }
+}
+
+body.logged-in {
+  #header,
+  #footer,
+  .secondary {
+    display: none !important;
+  }
+
+  #wrap-inner {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    padding: 0 !important;
+    transform: translateX(-50%) translateY(-50%) !important;
+  }
+
+  #main,
+  div.full {
+    width: 768px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    float: none !important;
+  }
+
+  div.full {
+    margin-top: 0 !important;
+  }
+
+  .auth-btns {
+    form + form {
+      display: none !important;
+    }
+  }
+
+  a {
+    color: #777 !important;
+  }
+
+  a,
+  p,
+  dt,
+  dd,
+  h1,
+  h2,
+  h3,
+  li,
+  ul {
+    cursor: default !important;
+    pointer-events: none !important;
+  }
+}

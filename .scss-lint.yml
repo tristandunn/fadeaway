@@ -1,0 +1,85 @@
+scss_files: "application/css/**/*.scss"
+
+linters:
+  HexLength:
+    enabled: true
+    style: short
+    exclude:
+      - "application/css/_colors.scss"
+
+  HexNotation:
+    enabled: true
+    style: uppercase
+
+  IdSelector:
+    enabled: false
+
+  LeadingZero:
+    enabled: true
+    style: include_zero
+
+  NestingDepth:
+    enabled: true
+    max_depth: 4
+    ignore_parent_selectors: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: true
+    exclude:
+      - "application/css/_reset.scss"
+    order:
+      - position
+      - top
+      - right
+      - bottom
+      - left
+      - background
+      - background-size
+      - color
+      - width
+      - height
+      - margin
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
+      - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
+      - border
+      - border-color
+      - border-top
+      - border-right
+      - border-bottom
+      - border-left
+      - border-radius
+      - font
+      - font-size
+      - font-weight
+      - font-style
+      - line-height
+      - letter-spacing
+      - text-align
+      - text-decoration
+      - text-transform
+      - display
+      - float
+      - opacity
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
+
+  SingleLinePerSelector:
+    enabled: true
+    exclude:
+      - "application/css/_reset.scss"
+
+  StringQuotes:
+    enabled: true
+    style: double_quotes

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Fadeaway</title>
+
+    <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+
+<div id="container"></div>
+
+<script src="js/application.js"></script>
+<script>
+  (function() {
+    let element,
+        options = {},
+        container = document.getElementById("container");
+
+    if (!navigator.onLine) {
+      element = OfflineComponent;
+    } else if (Settings.get("token")) {
+      let path = Settings.get("arguments").path;
+
+      if (path) {
+        if (path.match(/\.psd$/)) {
+          element = PhotoshopComponent;
+        } else if (path.match(/\.sketch$/)) {
+          element = SketchComponent;
+        } else {
+          element = UploadComponent;
+        }
+
+        options.path = path;
+      } else {
+        element = SelectionComponent;
+      }
+
+      window.require("electron")
+        .ipcRenderer
+        .send("check-for-update");
+    } else {
+      element = WelcomeComponent;
+    }
+
+    ReactDOM.render(React.createElement(element, options), container);
+  })();
+</script>
+
+</body>
+</html>

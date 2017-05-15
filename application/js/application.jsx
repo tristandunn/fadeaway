@@ -1,0 +1,23 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import Settings from "./utilities/settings";
+import SketchComponent from "./components/sketch.jsx";
+import UploadComponent from "./components/upload.jsx";
+import OfflineComponent from "./components/offline.jsx";
+import UpdaterComponent from "./components/updater.jsx";
+import WelcomeComponent from "./components/welcome.jsx";
+import PhotoshopComponent from "./components/photoshop.jsx";
+import SelectionComponent from "./components/selection.jsx";
+import PreferencesComponent from "./components/preferences.jsx";
+
+window.React                = React;
+window.ReactDOM             = ReactDOM;
+window.Settings             = Settings;
+window.SketchComponent      = SketchComponent;
+window.UploadComponent      = UploadComponent;
+window.OfflineComponent     = OfflineComponent;
+window.UpdaterComponent     = UpdaterComponent;
+window.WelcomeComponent     = WelcomeComponent;
+window.PhotoshopComponent   = PhotoshopComponent;
+window.SelectionComponent   = SelectionComponent;
+window.PreferencesComponent = PreferencesComponent;

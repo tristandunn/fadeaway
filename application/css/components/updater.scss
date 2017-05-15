@@ -1,0 +1,126 @@
+@import "../colors";
+@import "../shared";
+
+#updater {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $window-background;
+
+  header {
+    position: relative;
+    padding: 24px 24px 24px 112px;
+
+    img {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+    }
+
+    h1 {
+      color: $black;
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      color: $grey-800;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  section {
+    padding: 12px 24px;
+
+    button {
+      @extend %button;
+
+      margin-left: 12px;
+      float: right;
+    }
+  }
+
+  aside {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $white;
+    color: $black;
+    height: 200px;
+    line-height: 1.4;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    article {
+      padding: 24px;
+    }
+
+    p,
+    h1,
+    h2,
+    ul {
+      padding: 0 0 8px;
+    }
+
+    h2 {
+      color: $black;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+
+      span {
+        color: $grey-500;
+        padding-left: 8px;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    h3 {
+      color: $white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: inline-block;
+
+      &.additions {
+        background: $orange-500;
+      }
+
+      &.changes {
+        background: $light-blue-500;
+      }
+
+      &.fixes {
+        background: $green-500;
+      }
+
+      &.removed {
+        background: $red-500;
+      }
+    }
+
+    p {
+      + h2 {
+        margin-top: 12px;
+      }
+    }
+
+    ul {
+      padding: 12px 0 16px 20px;
+      font-size: 14px;
+      list-style: disc outside;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

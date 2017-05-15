@@ -1,0 +1,11 @@
+@import "welcome";
+
+#error {
+  @extend #welcome;
+
+  a {
+    color: $blue-500;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

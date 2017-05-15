@@ -1,0 +1,97 @@
+@import "../colors";
+
+$shadow: rgba(0, 0, 0, 0.5);
+
+#upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $grey-100;
+  padding: 32px;
+
+  .image {
+    float: left;
+    overflow: hidden;
+
+    .canvas {
+      background: $white;
+      border: 2px solid $grey-300;
+      overflow: hidden;
+    }
+
+    canvas {
+      width: 400px;
+      height: 300px;
+      float: left;
+      cursor: move;
+    }
+
+    input {
+      width: 376px;
+      margin: 18px 12px;
+      -webkit-appearance: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus::-webkit-slider-runnable-track {
+        background: $grey-300;
+      }
+
+      &::-webkit-slider-runnable-track {
+        background: $grey-300;
+        height: 6px;
+        border-radius: 12px;
+      }
+
+      &::-webkit-slider-thumb {
+        background: $grey-100;
+        width: 12px;
+        height: 12px;
+        margin-top: -3.5px;
+        border-radius: 12px;
+        box-shadow: 1px 1px 1px $shadow, 0 0 1px $shadow;
+        -webkit-appearance: none;
+      }
+    }
+  }
+
+  form {
+    width: 400px;
+    float: right;
+
+    input,
+    textarea {
+      color: $grey-700;
+      width: 100%;
+      margin: 0 0 20px;
+      padding: 8px 10px;
+      border: 1px solid $grey-300;
+      display: block;
+
+      &.error {
+        border-color: $red-300;
+      }
+    }
+
+    textarea {
+      height: 16px * 1.6 * 4;
+      line-height: 1.5;
+      resize: none;
+    }
+
+    button {
+      background: $dribbble-pink;
+      color: $white;
+      width: 100%;
+      padding: 18px 48px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 23px;
+      display: block;
+    }
+  }
+}

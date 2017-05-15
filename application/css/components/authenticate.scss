@@ -1,0 +1,36 @@
+@import "../colors";
+
+#authenticate {
+  .overlay,
+  .webview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .overlay {
+    background: $dribbble-sign-in-background;
+    color: $dribbble-sign-in-foreground;
+    opacity: 0;
+    z-index: 32;
+
+    transition: opacity 0.33s ease-out;
+
+    &.show {
+      opacity: 1;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .webview {
+    display: none;
+  }
+}

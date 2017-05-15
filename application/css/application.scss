@@ -1,0 +1,56 @@
+@import "reset";
+
+@import "components/authenticate";
+@import "components/error";
+@import "components/offline";
+@import "components/preferences";
+@import "components/progress";
+@import "components/selection";
+@import "components/sketch";
+@import "components/updater";
+@import "components/upload";
+@import "components/uploaded";
+@import "components/welcome";
+
+html,
+body,
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body,
+input,
+label,
+button,
+select,
+textarea {
+  font: 16px "Avenir";
+  text-rendering: optimizeLegibility;
+
+  // scss-lint:disable VendorPrefix
+  -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "kern";
+}
+
+body,
+button {
+  line-height: 1;
+}
+
+p,
+h1 {
+  cursor: default;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+object {
+  pointer-events: none;
+}

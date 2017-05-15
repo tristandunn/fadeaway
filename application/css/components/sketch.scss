@@ -1,0 +1,43 @@
+#sketch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 256px;
+  padding: 48px 0;
+  transform: translateX(-50%) translateY(-50%);
+
+  header {
+    text-align: center;
+
+    h1 {
+      color: $blue-grey-600;
+    }
+  }
+
+  select {
+    width: 100%;
+    margin: 16px auto;
+    border-color: $grey-400;
+    display: block;
+  }
+
+  option {
+    padding: 4px;
+  }
+
+  button {
+    background: $blue-grey-400;
+    color: $white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px 48px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    display: block;
+
+    &.active {
+      background: $dribbble-pink;
+    }
+  }
+}
